@@ -11,12 +11,22 @@ public class LineMethods {
         return (float) Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
     }
 
-    public void checkEquality(float line1, float line2){
-        if(line1==line2){
+    public void checkEquality(String line1, String line2){
+        if(line1.equals(line2)){
             System.out.println("both lines are equal.");
         }
         else {
             System.out.println("Both lines are not equal.");
+        }
+    }
+
+    public void compare2Lines(String line1, String line2){
+        int compareLines = line2.compareTo(line1);
+        if(compareLines>0){
+            System.out.println("First line is grater than second line.");
+        }
+        else {
+            System.out.println("Second line is grater than first Line.");
         }
     }
 }
