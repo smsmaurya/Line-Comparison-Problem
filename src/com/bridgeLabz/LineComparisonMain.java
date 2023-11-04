@@ -1,18 +1,24 @@
 package com.bridgeLabz;
 
-import java.util.Scanner;
-
-public class LineComparisonMain {
+public class LineComparisonMain extends LineMethods {
     public static void main(String[] args) {
+
         System.out.println("Welcome to Line Comparison Computation");
-        float newLine = createLine();
-        System.out.println(" Length of line is : "+newLine);
+        System.out.println();
+
+        LineMethods methods = new LineMethods();
+        System.out.println("Build First Line");
+        float newLine1 = methods.createLine();
+        System.out.println("Length of first line is : "+newLine1);
+        System.out.println();
+
+        System.out.println("Build second Line");
+        float newLine2 = methods.createLine();
+        System.out.println("Length of second line is : "+newLine2);
+        System.out.println();
+
+        System.out.println("\nAfter checking the equality of both line the result is :-");
+        methods.checkEquality(newLine1,newLine2);
     }
-    public static float createLine(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the value of x1, y1, x2,y2 ");
-        int x1 = sc.nextInt(),y1 = sc.nextInt(), x2 = sc.radix(),y2 = sc.nextInt();
-        int x = x2-x1, y = y2-y1;
-        return (float) Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
-    }
+
 }
